@@ -25,5 +25,7 @@ guideNinja(tapPosition: view.center)
 if you need any delay before starting the guide, use "asyncAfter" like this:
 
   DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+  
     guideNinja(start: .i1, end: .i9) // guide will appear after 4 seconds 
+    
   }
