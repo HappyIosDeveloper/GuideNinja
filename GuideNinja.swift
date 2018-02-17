@@ -149,4 +149,13 @@ extension UIViewController {
             }
         }
     }
+    
+  func guideNinja(removeLeftOvers:Bool = true) {
+        for i in 0..<self.view.subviews.count {
+            if self.view.subviews[i].tag == 999 {
+                self.view.subviews[i].removeFromSuperview()
+                return
+            }
+        }
+    }
 }
