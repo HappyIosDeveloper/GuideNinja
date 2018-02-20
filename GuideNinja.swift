@@ -74,6 +74,7 @@ extension UIViewController {
         pointerView.image = finger
         pointerView.alpha = 0
         pointerView.tintColor = color
+        pointerView.tag = 999
         view.addSubview(pointerView)
         view.bringSubview(toFront: pointerView)
         pointerView.layer.position = startPosition
@@ -103,6 +104,7 @@ extension UIViewController {
         pointerView.image = finger
         pointerView.alpha = 0
         pointerView.tintColor = color
+        pointerView.tag = 999
         view.addSubview(pointerView)
         view.bringSubview(toFront: pointerView)
         pointerView.layer.position = start
@@ -120,6 +122,7 @@ extension UIViewController {
         pointerView.image = finger
         pointerView.alpha = 0
         pointerView.tintColor = UIColor.green
+        pointerView.tag = 999
         view.addSubview(pointerView)
         view.bringSubview(toFront: pointerView)
         UIView.animate(withDuration: 0.3, animations: {
@@ -132,6 +135,7 @@ extension UIViewController {
                         circle.backgroundColor = UIColor.white
                         circle.alpha = 0.9
                         circle.layer.cornerRadius = circle.bounds.width / 2
+                        circle.tag = 999
                         self.view.addSubview(circle)
                         self.view.bringSubview(toFront: pointerView)
                         UIView.animate(withDuration: 2, animations: {
@@ -150,7 +154,7 @@ extension UIViewController {
         }
     }
     
-  func guideNinja(removeLeftOvers:Bool = true) {
+  func guideNinja(removeLeftOvers:Bool = true) { // If pointer didn't removed frome the sceen, call this!
         for i in 0..<self.view.subviews.count {
             if self.view.subviews[i].tag == 999 {
                 self.view.subviews[i].removeFromSuperview()
