@@ -3,7 +3,7 @@ Simplest way to show a pointer finger tapping or swiping on screen. (tapping wor
 
 ![Alt Text](https://github.com/UzumakiAlfredo/GuideNinja/blob/master/screenshot.gif)
 
-
+ps: preview is slowmotion!
 
 # Usage
 Simply add guideNinja to your project and just call it where ever you like, like this:
@@ -27,6 +27,6 @@ guideNinja(tapPosition: view.center)
 
 if you need any delay before starting the guide, use "asyncAfter" like this:
 
-  DispatchQueue.main.asyncAfter(deadline: .now() + 4) { // delay for 4 sec
-    self.guideNinja(start: .i1, end: .i9) // guide will appear after 4 seconds 
-  }
+     DispatchQueue.main.asyncAfter(deadline: .now() + 4) { // delay for 4 sec
+         self.guideNinja(start: .i1, end: .i9) // guide will appear after 4 seconds 
+     }
